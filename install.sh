@@ -99,6 +99,7 @@ then
 		git config --global user.email "jan@parcelsolutios.eu"
 		git config --global user.name "ParcelSolutions"
 		git config --global credential.helper "cache --timeout=3600"
+		#git cola
 		sudo apt install -y git-cola
 		#gitahead
 		curl -s https://api.github.com/repos/gitahead/gitahead/releases/latest \
@@ -108,7 +109,10 @@ then
 			| wget -qi -
 		sh GitAhead* -y
 		rm GitAhead*.sh
-
+		#git hub desktop
+		sudo apt update
+		sudo apt install -y snapd
+		sudo snap install -y github-desktop --beta --classic
 
 	echo "=> docker"
 		sudo apt install -y --no-install-recommends apt-transport-https ca-certificates curl software-properties-common
