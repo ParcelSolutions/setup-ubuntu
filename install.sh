@@ -33,7 +33,7 @@ then
 		gsettings set org.gnome.desktop.session idle-delay 0
 
 	echo "=> build essentials"
-		sudo apt-get update && sudo apt-get install -y --no-install-recommends apt-utils && \
+		sudo apt-get update && sudo apt-get install -y --no-install-recommends apt-utils
 		sudo apt-get install -y build-essential && sudo apt-get install -y apt-transport-https ca-certificates
 	echo "=> node"
 		sudo apt install -y nodejs
@@ -44,16 +44,16 @@ then
 	echo "=> build CF"
 
 
-		echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list && \
-		  sudo apt-get update &&  sudo apt-get install cf-cli -y --allow-unauthenticated && cf -v && \ 
-		  cf add-plugin-repo CF-Community https://plugins.cloudfoundry.org && \ 
-		  cf install-plugin blue-green-deploy -r CF-Community -f && \ 
+		echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list 
+		  sudo apt-get update &&  sudo apt-get install cf-cli -y --allow-unauthenticated && cf -v
+		  cf add-plugin-repo CF-Community https://plugins.cloudfoundry.org  
+		  cf install-plugin blue-green-deploy -r CF-Community -f 
 		  cf install-plugin -r CF-Community app-autoscaler-plugin -f 
 
 	echo "=> build IBMCLOUD"
-		curl -fsSL https://clis.cloud.ibm.com/install/linux | sh && \
-		  ibmcloud plugin install cloud-functions -f && \ 
-		  ibmcloud -v 
+		curl -fsSL https://clis.cloud.ibm.com/install/linux | sh		  
+		ibmcloud plugin install cloud-functions -f 
+		ibmcloud -v 
 
 	echo "=> build Meteor"
 	  	curl https://install.meteor.com | /bin/sh &&  meteor --version 
