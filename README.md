@@ -1,0 +1,5 @@
+- get ubuntu image from https://www.osboxes.org/ubuntu/
+- start
+- run script in shell `sh install.sh desktop`
+- run one github command (login)
+- run script in shell `sh install.sh git`
