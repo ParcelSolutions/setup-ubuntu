@@ -140,7 +140,7 @@ then
 	cd ~/functions && git clone "https://github.com/ParcelSolutions/simulaterate.git" && npm install
 	cd ~/functions && git clone "https://github.com/ParcelSolutions/bigquery_module_transmate.git" && npm install
 	cd ~/functions && git clone "https://github.com/ParcelSolutions/imports-api-transmate.git" && npm install
-	cd ~/functions && git clone "https://github.com/ParcelSolutions/simulaterate.git" && npm install
+	cd ~/functions && git clone "https://github.com/ph-poppe/transmate-calculations.git" && npm install
 	cd ~/nodeapp && git clone "https://github.com/ParcelSolutions/bull-worker.git" && npm install
 	cd ~/meteor && git clone "https://github.com/ph-poppe/transmate-new.git" && npm install
 fi
