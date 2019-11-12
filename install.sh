@@ -76,7 +76,7 @@ then
 		sudo apt update
 		sudo apt install -y --no-install-recommends  software-properties-common apt-transport-https wget
 		wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
-		sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+		sudo add-apt-repository -y "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
 		sudo apt update
 		sudo apt install -y --no-install-recommends  code
 		sudo npm install -g eslint
@@ -118,7 +118,7 @@ then
 	echo "=> docker"
 		sudo apt install -y --no-install-recommends apt-transport-https ca-certificates curl software-properties-common
 		curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-		sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
+		sudo add-apt-repository -y "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
 		curl -fsSL https://get.docker.com -o get-docker.sh
 		sh get-docker.sh
 	
