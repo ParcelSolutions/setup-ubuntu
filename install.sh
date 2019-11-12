@@ -30,6 +30,7 @@ then
 		gsettings set org.gnome.desktop.input-sources sources '[]'
 		# switch of screensaver
 		gsettings set org.gnome.desktop.screensaver idle-activation-enabled false
+		gsettings set org.gnome.desktop.session idle-delay 0
 
 	echo "=> build essentials"
 		sudo apt-get update && sudo apt-get install -y --no-install-recommends apt-utils && \
