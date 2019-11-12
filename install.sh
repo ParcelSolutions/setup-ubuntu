@@ -28,6 +28,8 @@ then
 		# set be on start
 		sh -c "setxkbmap be"
 		gsettings set org.gnome.desktop.input-sources sources '[]'
+		# switch of screensaver
+		gsettings set org.gnome.desktop.screensaver idle-activation-enabled false
 
 	echo "=> build essentials"
 		sudo apt-get update && sudo apt-get install -y --no-install-recommends apt-utils && \
