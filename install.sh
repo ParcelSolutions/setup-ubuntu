@@ -110,9 +110,10 @@ then
 		sh GitAhead* -y
 		rm GitAhead*.sh
 		#git hub desktop
+		#  sudo rm -rf sources.list.d
 		sudo apt update
 		sudo apt install -y snapd
-		sudo snap install -y github-desktop --beta --classic
+		sudo snap install github-desktop --beta --classic
 
 	echo "=> docker"
 		sudo apt install -y --no-install-recommends apt-transport-https ca-certificates curl software-properties-common
