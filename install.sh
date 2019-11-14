@@ -53,6 +53,7 @@ then
 	echo "=> build IBMCLOUD"
 		curl -fsSL https://clis.cloud.ibm.com/install/linux | sh		  
 		ibmcloud plugin install cloud-functions -f 
+		ibmcloud plugin install cloud-databases -f
 		ibmcloud -v 
 
 	echo "=> build Meteor"
