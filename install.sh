@@ -147,8 +147,4 @@ then
 	cd ~/nodeapp && git clone "https://github.com/ParcelSolutions/bull-worker.git" && cd bull-worker && npm install
 	cd ~/meteor && git clone "https://github.com/ph-poppe/transmate-new.git" && cd transmate-new && npm install
 fi
-if [ $1 = "patch" ]
-then
-	sudo snap install canonical-livepatch
-	sudo canonical-livepatch enable f44f4ce5783e4e5ea01f6db076c57c4f
-fi
+
