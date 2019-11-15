@@ -8,12 +8,12 @@ then
 	sudo timedatectl set-timezone Europe/Brussels
 	sudo dpkg-reconfigure --frontend noninteractive tzdata
 	#remove games
-	sudo apt-get remove gnome-games gnome-games-common empathy
-	sudo apt-get remove unity-lens-shopping
+	sudo apt-get remove -y --purge gnome-games gnome-games-common empathy
+	sudo apt-get remove -y --purge unity-lens-shopping
 	sudo apt purge -y ubuntu-web-launchers
 	sudo apt purge -y aisleriot gnome-mahjongg gnome-mines gnome-sudoku
 	#remove mozilla
-	sudo apt-get remove --purge thunderbird firefox
+	sudo apt-get remove  -y --purge thunderbird firefox
 	sudo apt autoremove -y
 
 	#add ntp time server
