@@ -12,6 +12,8 @@ then
 	sudo apt-get remove unity-lens-shopping
 	sudo apt purge -y ubuntu-web-launchers
 	sudo apt purge -y aisleriot gnome-mahjongg gnome-mines gnome-sudoku
+	#remove mozilla
+	sudo apt-get remove --purge thunderbird firefox
 	sudo apt autoremove -y
 
 	#add ntp time server
