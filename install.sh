@@ -101,6 +101,8 @@ then
 		sudo apt install -y --no-install-recommends  git
 		git config --global user.email "jan@parcelsolutios.eu"
 		git config --global user.name "ParcelSolutions"
+		#store passwords
+		git config --global credential.helper wincred
 		git config --global credential.helper "cache --timeout=3600"
 		#git cola
 		sudo apt install -y git-cola
