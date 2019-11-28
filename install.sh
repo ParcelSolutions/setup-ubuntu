@@ -44,8 +44,7 @@ then
 		sudo npm install -g webpack
 
 	echo "=> build CF"
-
-
+		wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
 		echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list 
 		  sudo apt-get update &&  sudo apt-get install cf-cli -y --allow-unauthenticated && cf -v
 		  cf add-plugin-repo CF-Community https://plugins.cloudfoundry.org  
