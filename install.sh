@@ -71,6 +71,7 @@ then
 				
 	echo "-> setup python"
 		sudo apt-get install -y python-virtualenv
+		sudo apt install -y python-pip
 
 
 	# Update Repository Information
