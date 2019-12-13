@@ -69,7 +69,8 @@ then
 	echo "=> build Meteor"
 	  	curl https://install.meteor.com | /bin/sh &&  meteor --version 
 				
-
+	echo "-> setup python"
+		sudo apt-get install -y python-virtualenv
 
 
 	# Update Repository Information
