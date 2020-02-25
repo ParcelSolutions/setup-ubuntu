@@ -129,6 +129,8 @@ then
 		sudo apt update
 		sudo apt install -y snapd
 		sudo snap install github-desktop --beta --classic
+		# git flow
+		sudo apt-get install -y git-flow
 
 	echo "=> docker"
 		sudo apt install -y --no-install-recommends apt-transport-https ca-certificates curl software-properties-common
