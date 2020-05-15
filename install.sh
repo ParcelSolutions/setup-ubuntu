@@ -19,6 +19,13 @@ then
 	#add ntp time server
 	sudo apt-get install -y ntp
 	
+	#add guest additions
+	sudo apt-cache policy virtualbox-guest-additions-iso
+	sudo apt install -y virtualbox-guest-additions-iso
+	sudo mount -o loop /usr/share/virtualbox/VBoxGuestAdditions.iso /media/
+	sudo /media/VBoxLinuxAdditions.run
+	
+	
 	echo "=> set keyboard BE"
 		#sudo loadkeys be
 		#sudo setxkbmap be
@@ -73,14 +80,12 @@ then
 		sudo apt-get install -y python-virtualenv
 		sudo apt install -y python-pip
 
-
 	# Update Repository Information
 		echo 'Updating repository information...'
 		sudo apt-get update -qq
 	# Dist-Upgrade
 		echo 'Performing system upgrade...'
 		sudo apt-get dist-upgrade -y
-
 
 	echo "we will install desktop software now."
 	
