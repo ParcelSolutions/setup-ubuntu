@@ -4,8 +4,7 @@ if [ $1 = "desktop" ]
 then
 	sudo apt update
 	sudo apt upgrade -y
-	# for guest additions
-	sudo apt install -y build-essential dkms linux-headers-$(uname -r)
+
 	# add user to vboxsf group
 	sudo adduser $USER vboxsf
 	#set brussels timezone
@@ -23,11 +22,7 @@ then
 	#add ntp time server
 	sudo apt-get install -y ntp
 	
-	#add guest additions
-	sudo apt-cache policy virtualbox-guest-additions-iso
-	sudo apt install -y virtualbox-guest-additions-iso
-	sudo mount -o loop /usr/share/virtualbox/VBoxGuestAdditions.iso /media/
-	sudo /media/VBoxLinuxAdditions.run
+
 	
 	
 	echo "=> set keyboard BE"
@@ -48,6 +43,12 @@ then
 	echo "=> build essentials"
 		sudo apt-get update && sudo apt-get install -y --no-install-recommends apt-utils
 		sudo apt-get install -y build-essential && sudo apt-get install -y apt-transport-https ca-certificates
+	echo "=> install virtualbox guest"
+		#add guest additions
+		sudo apt-cache policy virtualbox-guest-additions-iso
+		sudo apt install -y virtualbox-guest-additions-iso
+		sudo mount -o loop /usr/share/virtualbox/VBoxGuestAdditions.iso /media/
+		sudo /media/VBoxLinuxAdditions.run
 	echo "=> node"
 		sudo apt install -y nodejs
 		sudo apt install -y npm
