@@ -2,6 +2,10 @@
 
 if [ $1 = "desktop" ]
 then
+	sudo apt update
+	sudo apt upgrade -y
+	# for guest additions
+	sudo apt install -y build-essential dkms linux-headers-$(uname -r)
 	# add user to vboxsf group
 	sudo adduser $USER vboxsf
 	#set brussels timezone
