@@ -31,7 +31,8 @@ then
 		# REMOVE some unneeded apps #
 		
 		# set keyboard
-		sudo dpkg-reconfigure keyboard-configuration
+		#sudo dpkg-reconfigure keyboard-configuration
+		L='be' && sudo sed -i 's/XKBLAYOUT=\"\w*"/XKBLAYOUT=\"'$L'\"/g' /etc/default/keyboard
 		sudo service keyboard-setup restart
 		# set be on start
 		sh -c "setxkbmap be"
