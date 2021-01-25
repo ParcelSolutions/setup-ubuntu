@@ -2,6 +2,7 @@
 
 if [ $1 = "desktop" ]
 then
+	export DEBIAN_FRONTEND=noninteractive
 	sudo apt update
 	sudo apt upgrade -y
 
