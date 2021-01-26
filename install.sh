@@ -65,7 +65,9 @@ then
 		sudo mount -o loop /usr/share/virtualbox/VBoxGuestAdditions.iso /media/
 		sudo /media/VBoxLinuxAdditions.run
 	echo "=> node"
-		sudo apt install -y nodejs
+		curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+		source ~/.bashrc
+		nvm install v12
 		sudo apt install -y npm
 		sudo npm install npm@latest -g
 		sudo npm install -g webpack
@@ -94,7 +96,7 @@ then
 		sudo apt-get install -y mongodb-org
 		
 	echo "=> build Meteor"
-	  	curl https://install.meteor.com | /bin/sh &&  meteor --version 
+	  	curl https://install.meteor.com | sudo /bin/sh &&  meteor --version 
 				
 	echo "-> setup python"
 		sudo apt-get install -y python-virtualenv
