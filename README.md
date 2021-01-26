@@ -9,3 +9,9 @@
 setup git credentials (for gitahead to function correctly)
 
 git ls-remote https://url/of/remote/repo
+
+
+can be used to create a new box
+sudo -s
+by
+curl https//... | sh 
