@@ -13,5 +13,4 @@ git ls-remote https://url/of/remote/repo
 
 can be used to create a new box
 sudo -s
-by
-curl https//... | sh 
+curl -s http://server/path/script.sh | bash -s arg1 arg2
