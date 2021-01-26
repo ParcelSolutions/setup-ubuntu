@@ -82,11 +82,10 @@
 	  	curl https://install.meteor.com | /bin/sh &&  meteor --version 
 				
 	echo "-> setup python"
-		sudo apt-get install -y python-virtualenv
-		sudo apt install -y python-pip
-		sudo apt install python3 -y 
-		sudo apt install python3-pip -y 
-		sudo apt install python3-venv -y 
+
+		sudo apt-get install -y python3
+		sudo apt-get install -y python3-pip 
+		sudo apt-get install -y python3-venv
 		sudo python3 -m venv venv
 		
 	# Update Repository Information
