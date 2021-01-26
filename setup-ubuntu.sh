@@ -1,7 +1,9 @@
 	export DEBIAN_FRONTEND=noninteractive
 	sudo apt update
 	sudo apt upgrade -y
-
+	# install gnome desktop on server
+	sudo apt install -y tasksel 
+	sudo tasksel install -y ubuntu-desktop-minimal
 	# add user to vboxsf group
 	sudo adduser "$USER" vboxsf
 	#set brussels timezone
