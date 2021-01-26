@@ -4,10 +4,14 @@ if [ $1 = "desktop" ]
 then
 	export DEBIAN_FRONTEND=noninteractive
 	sudo apt update
-	sudo apt upgrade -y
+	# Dist-Upgrade
+	echo '=> Performing system upgrade...'
+		sudo apt-get dist-upgrade -y
 
+	# disable animations
+	gsettings set org.gnome.desktop.interface enable-animations false
 	# add user to vboxsf group
-	sudo adduser $USER vboxsf
+	sudo adduser osboxes vboxsf
 	#set brussels timezone
 	sudo timedatectl set-timezone Europe/Brussels
 	sudo dpkg-reconfigure --frontend noninteractive tzdata
@@ -90,11 +94,11 @@ then
 	# Update Repository Information
 		echo 'Updating repository information...'
 		sudo apt-get update -qq
-	# Dist-Upgrade
-		echo 'Performing system upgrade...'
-		sudo apt-get dist-upgrade -y
+	
 
-	echo "we will install desktop software now."
+
+
+	echo "=> install desktop software now."
 	
 		sudo apt-get install -y --no-install-recommends filezilla chromium-browser
 	
