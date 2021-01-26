@@ -33,6 +33,8 @@ then
 	#add ntp time server
 	sudo apt-get install -y ntp
 	
+	echo "=> add ip address"
+	sudo apt-get install -y net-tools
 
 	
 	
@@ -51,7 +53,8 @@ then
 		# switch of screensaver
 		gsettings set org.gnome.desktop.screensaver idle-activation-enabled false
 		gsettings set org.gnome.desktop.session idle-delay 0
-
+	#echo "=> add fixed ip"
+		#sudo ip addr add 192.168.7.7/24 broadcast 192.168.7.1 dev enp0s3 label enp0s3:1
 	echo "=> build essentials"
 		sudo apt-get update && sudo apt-get install -y --no-install-recommends apt-utils
 		sudo apt-get install -y build-essential && sudo apt-get install -y apt-transport-https ca-certificates
