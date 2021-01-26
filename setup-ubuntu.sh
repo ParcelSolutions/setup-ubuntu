@@ -84,7 +84,11 @@
 	echo "-> setup python"
 		sudo apt-get install -y python-virtualenv
 		sudo apt install -y python-pip
-
+		sudo apt install python3 -y 
+		sudo apt install python3-pip -y 
+		sudo apt install python3-venv -y 
+		sudo python3 -m venv venv
+		
 	# Update Repository Information
 		echo 'Updating repository information...'
 		sudo apt-get update -qq
