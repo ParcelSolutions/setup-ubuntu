@@ -22,8 +22,14 @@ then
 	sudo apt purge -y aisleriot gnome-mahjongg gnome-mines gnome-sudoku
 	#remove mozilla
 	sudo apt-get remove  -y --purge thunderbird firefox
-	sudo apt autoremove -y
-
+	
+	# remove other non used apps
+	sudo apt-get remove -y --purge rhythmbox 
+	sudo apt-get purge -y transmission-gtk
+	sudo apt-get remove --purge libreoffice-\* -y
+	# cleanup left over libs
+	sudo apt autoremove -y 
+	
 	#add ntp time server
 	sudo apt-get install -y ntp
 	
