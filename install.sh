@@ -27,8 +27,8 @@ then
 	sudo apt-get remove -y --purge rhythmbox 
 	sudo apt-get purge -y transmission-gtk
 	sudo apt-get remove --purge libreoffice-\* -y
-	# cleanup left over libs
-	sudo apt autoremove -y 
+	# cleanup left over libs (already in cleanup section)
+	# sudo apt autoremove -y 
 	
 	#add ntp time server
 	sudo apt-get install -y ntp
