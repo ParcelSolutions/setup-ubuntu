@@ -4,6 +4,7 @@
 	# install gnome desktop on server
 	sudo apt install -y tasksel 
 	sudo tasksel install -y ubuntu-desktop-minimal
+	sudo apt install -y nautilus-admin
 	# add user to vboxsf group
 	sudo adduser "$USER" vboxsf
 	#set brussels timezone
