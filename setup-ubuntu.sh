@@ -66,7 +66,7 @@
 		  cf install-plugin -r CF-Community app-autoscaler-plugin -f 
 
 	echo "=> build IBMCLOUD"
-		curl -fsSL https://clis.cloud.ibm.com/install/linux | sh		  
+		curl -fsSL https://clis.cloud.ibm.com/install/linux | sudo sh		  
 		ibmcloud plugin install cloud-functions -f 
 		ibmcloud plugin install cloud-databases -f
 		ibmcloud -v 
