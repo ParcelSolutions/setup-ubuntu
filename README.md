@@ -13,4 +13,4 @@ git ls-remote https://url/of/remote/repo
 
 can be used to create a new box
 sudo -s
-curl -s http://server/path/script.sh | bash -s arg1 arg2
+curl -s https://raw.githubusercontent.com/ParcelSolutions/setup-ubuntu/master/setup-ubuntu.sh | bash -s
