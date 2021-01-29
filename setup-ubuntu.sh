@@ -82,6 +82,7 @@
 		
 	echo "=> build Meteor"
 	  	curl https://install.meteor.com | /bin/sh &&  meteor --version 
+		echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 				
 	echo "-> setup python"
 
