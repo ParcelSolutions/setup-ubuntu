@@ -156,6 +156,7 @@
 		#apt-cache policy docker-ce
 		sudo apt-get install -y docker-ce
 		sudo usermod -aG docker "${USER}"
+		sudo usermod -aG docker "osboxes"
 		sudo chmod 666 /var/run/docker.sock 
 	
 
