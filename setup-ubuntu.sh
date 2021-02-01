@@ -8,6 +8,7 @@
 	sudo apt-get -y install gedit
 	# add user to vboxsf group
 	sudo adduser "$USER" vboxsf
+	sudo adduser "osboxes" vboxsf
 	#set brussels timezone
 	sudo timedatectl set-timezone Europe/Brussels
 	sudo dpkg-reconfigure --frontend noninteractive tzdata
@@ -23,25 +24,27 @@
 	#add ntp time server
 	sudo apt-get install -y ntp
 	
-
+	# set keyboard to be if asked for in params
+	if [$1=='be']
+	then
 	
-	
-	echo "=> set keyboard BE"
-		#sudo loadkeys be
-		#sudo setxkbmap be
-		# REMOVE some unneeded apps #
-		
-		# set keyboard
-		#sudo dpkg-reconfigure keyboard-configuration
-		L='be' && sudo sed -i 's/XKBLAYOUT=\"\w*"/XKBLAYOUT=\"'$L'\"/g' /etc/default/keyboard
-		sudo service keyboard-setup restart
-		# set be on start
-		sh -c "setxkbmap be"
-		gsettings set org.gnome.desktop.input-sources sources '[]'
-		# switch of screensaver
-		gsettings set org.gnome.desktop.screensaver idle-activation-enabled false
-		gsettings set org.gnome.desktop.session idle-delay 0
+		echo "=> set keyboard BE"
+			#sudo loadkeys be
+			#sudo setxkbmap be
+			# REMOVE some unneeded apps #
 
+			# set keyboard
+			#sudo dpkg-reconfigure keyboard-configuration
+			L='be' && sudo sed -i 's/XKBLAYOUT=\"\w*"/XKBLAYOUT=\"'$L'\"/g' /etc/default/keyboard
+			sudo service keyboard-setup restart
+			# set be on start
+			sh -c "setxkbmap be"
+			gsettings set org.gnome.desktop.input-sources sources '[]'
+
+	fi
+	echo "=> switch of screensaver"			# switch of screensaver
+			gsettings set org.gnome.desktop.screensaver idle-activation-enabled false
+			gsettings set org.gnome.desktop.session idle-delay 0
 	echo "=> build essentials"
 		sudo apt-get update && sudo apt-get install -y --no-install-recommends apt-utils
 		sudo apt-get install -y build-essential && sudo apt-get install -y apt-transport-https ca-certificates
