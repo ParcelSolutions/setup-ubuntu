@@ -59,6 +59,7 @@
 		sudo apt install -y npm
 		sudo npm install npm@latest -g
 		sudo npm install -g webpack
+		suod npm install -g eslint
 
 	echo "=> build CF"
 		wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
