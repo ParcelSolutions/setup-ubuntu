@@ -58,9 +58,10 @@
 		sudo apt install -y nodejs
 		sudo apt install -y npm
 		sudo apt install -y node-pre-gyp
+		sudo apt install -y eslint
 		sudo npm install npm@latest -g
 		sudo npm install -g webpack
-		suod npm install -g eslint
+		sudo npm install -g eslint
 		sudo npm install -g mocha 
 
 	echo "=> build CF"
