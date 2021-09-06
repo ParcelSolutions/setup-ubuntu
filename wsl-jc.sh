@@ -40,3 +40,5 @@ sudo apt upgrade -y
 		git config --global user.name "Jan Carpentier"
 		#store passwords
 		git config --global credential.helper "cache --timeout=3600"
+	echo "=> DOPPLER"
+		(curl -Ls --tlsv1.2 --proto "=https" --retry 3 https://cli.doppler.com/install.sh || wget -t 3 -qO- https://cli.doppler.com/install.sh) | sudo sh
